@@ -1,11 +1,12 @@
 import React from 'react';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 const ToDoList = (props) =>{
 
     return(
         <>
         <div className="todo_style">
-            <i className="fa fa-times" aria-hidden="true" 
+            <DeleteForeverIcon className="fa-times"
             onClick={()=>{props.onSelect(props.id)}}/>
             <li>{props.task}</li>
         </div>

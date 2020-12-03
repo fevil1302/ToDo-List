@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import ToDoList from './ToDoList';
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
@@ -37,9 +40,11 @@ const App = () => {
                     onChange={updateList}
                     placeholder="Add a Task"
                     value={inputTask}
-                />
-                <button onClick={addTask}>+</button>
-
+                />  
+                {/* <Button className="Newbutton" onClick={addTask}>
+                    <AddIcon />
+                </Button>               */}
+                <button type="button" className="btn btn-success" onClick={addTask}><AddIcon /></button>
                 <ol>
                     {
                         tasks.map((tsk,index)=>{
